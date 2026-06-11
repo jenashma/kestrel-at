@@ -70,7 +70,9 @@ Requirements:
 Setup:
 1. Copy config/dev.exs.example to config/dev.exs.
 2. `mix deps.get`
-3. Run `mix phx.gen.secret` and replace the placeholder text in the KestrelWeb.Endpoint secret_key_base in dev.exs.
+3. In dev.exs, under `config :kestrel, KestrelWeb.Endpoint` locate the following and replace the placeholder text with the results of the mix commands:
+    - secret_key_base = `mix phx.gen.secret`
+    - signing_salt =  = `mix phx.gen.secret 8`
 4. `mix ecto.setup`
 5. `mix ecto.seed`
 6. `mix phx.server`

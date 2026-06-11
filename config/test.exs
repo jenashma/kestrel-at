@@ -14,7 +14,8 @@ config :kestrel, Kestrel.Repo,
   hostname: "localhost",
   database: "kestrel_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
-  pool_size: System.schedulers_online() * 2
+  pool_size: System.schedulers_online() * 2,
+  test_secret_key_base: "Uq1X6Wgy63tkk8TkT5WcFRMw51kLHXnaDt9cURfWJzavRZNJlotOTUIB2Tbt9EqY"
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
