@@ -1,0 +1,117 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+
+:root {
+    --bg-base: #2b3339;
+    --bg-surface: #323c41;
+    --bg-border: #4a555b;
+    --text-light: #d3c6aa;
+    --text-dark: #564d3a;
+    --accent-green: #a7c080;
+    --accent-yellow: #dbbc7f;
+    --accent-red: #e67e80;
+    --accent-blue: #7fbbb3;
+    --accent-purple: #d699b6;
+}
+
+main {
+    background-color: var(--bg-base);
+}
+
+h2 {
+    color: var(--text-light);
+}
+
+#assignment_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1300px;
+}
+
+#available_now_list,
+#upcoming_list,
+#completed_list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: left; */
+    align-items: flex-start;
+}
+
+.min_card {
+    display: flex;
+    width: 300px;
+    margin: 3px auto;
+    padding: 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: var(--bg-border);
+    color: var(--text-light);
+    font-family: "Inter";
+    justify-content: space-between;
+}
+
+.data,
+.pills {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.data {
+    justify-content: flex-start;
+    max-width: 180px;
+    flex-grow: 2;
+    margin: 3px auto;
+    padding: 2px;
+}
+
+.pills {
+    align-items: center;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.code_and_steps {
+    display: flex;
+    font-size: 8pt;
+}
+
+.assignment_name,
+.due_date {
+    font-size: 10pt;
+}
+
+.steps {
+    margin-left: 1.5rem;
+    color: var(--accent-blue);
+}
+
+.status,
+.type {
+    margin: 2px;
+    padding: 0 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    color: var(--text-dark);
+}
+
+.status {
+    background-color: var(--accent-purple);
+}
+
+.type {
+    background-color: var(--accent-blue);
+}
+
+.notes {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: inherit;
+    font-size: 10pt;
+    align-items: left;
+}
