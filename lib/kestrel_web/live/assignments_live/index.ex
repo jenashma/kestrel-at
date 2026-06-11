@@ -7,6 +7,7 @@ defmodule KestrelWeb.AssignmentsLive.Index do
 
   alias Kestrel.Assignments
   alias KestrelWeb.MinCard
+  alias KestrelWeb.PriorityContainer
 
   def mount(_params, _session, socket) do
     user = socket.assigns.current_user
@@ -50,10 +51,9 @@ defmodule KestrelWeb.AssignmentsLive.Index do
       
       <div id="available_now_list">
         <.live_component
-          :for={a <- @available}
-          id={a.id}
-          module={MinCard}
-          assignment={a}
+          id={111}
+          module={PriorityContainer}
+          available={@available}
           connected={@connected}
           user_time_zone={@user_time_zone}
         />
