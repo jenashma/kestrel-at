@@ -14,10 +14,10 @@ defmodule KestrelWeb.PriorityContainer do
   """
   def render(assigns) do
     ~H"""
-    <div class="priority-container">
+    <div class="priority_container">
       <div id="available_now_list">
         <.live_component
-          :for={a <- @available}
+          :for={a <- @assignment_list}
           id={a.id}
           module={MinCard}
           assignment={a}

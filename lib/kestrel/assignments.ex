@@ -51,11 +51,12 @@ defmodule Kestrel.Assignments do
     |> where([a], a.user_id == ^user.id)
     |> where([a], a.status_id != ^archived_status.id)
     |> group_by([a, c, t, st], [a.id, c.code, t.name, st.name])
-    |> order_by([a], asc: a.priority, asc: a.due_date, asc: a.name)
     |> select([a, c, t, st, s], %{
       id: a.id,
       name: a.name,
+      is_prioritized: a.is_prioritized,
       priority: a.priority,
+      group: a.group,
       due_date: a.due_date,
       unlock_date: a.unlock_date,
       notes: a.notes,
@@ -68,43 +69,46 @@ defmodule Kestrel.Assignments do
     |> Repo.all()
   end
 
-  def filter_assignments(:upcoming, assignments, now) do
-    # upcoming =
-    Enum.filter(assignments, fn a ->
-      DateTime.compare(a.unlock_date, now) == :gt and a.status_name != "Complete"
-    end)
+  def filter_assignments(:available, assignments, now) do
+    {priority_raw, date_raw} =
+      assignments
+      |> Enum.filter(fn a ->
+        DateTime.compare(a.unlock_date, now) != :gt and a.status_name != "Complete"
+      end)
+      |> Enum.split_with(fn a -> a.is_prioritized == true end)
 
-    # group_by_priority(upcoming, now)
+    priority_list =
+      priority_raw
+      |> Enum.group_by(fn a -> "available-by-priority-#{trunc(a.priority)}" end)
+      |> Enum.map(fn {priority, list} -> {priority, Enum.sort_by(list, & &1.priority)} end)
+
+    date_list =
+      date_raw
+      |> Enum.group_by(fn a -> "available-by-due-date-#{a.due_date}" end)
+      |> Enum.map(fn {priority, list} ->
+        {priority, Enum.sort_by(list, &DateTime.to_date(&1.due_date), Date)}
+      end)
+
+    {priority_list, date_list}
   end
 
-  def filter_assignments(:available, assignments, now) do
-    # available =
-    Enum.filter(assignments, fn a ->
-      DateTime.compare(a.unlock_date, now) != :gt and a.status_name != "Complete"
+  def filter_assignments(:upcoming, assignments, now) do
+    assignments
+    |> Enum.filter(fn a ->
+      DateTime.compare(a.unlock_date, now) == :gt and a.status_name != "Complete"
     end)
-
-    # available_by_priority =
-    #   Enum.filter(available, fn a ->
-    #     a.is_priority == true
-    #   end)
-
-    # available_by_date =
-    #   Enum.filter(available, fn a ->
-    #     a.is_priority != true
-    #   end)
-
-    # {group_by_priority(available_by_priority, now), group_by_priority(available_by_date, now)}
+    |> Enum.group_by(fn a -> "upcoming-#{a.unlock_date}" end)
+    |> Enum.map(fn {priority, list} ->
+      {priority, Enum.sort_by(list, &DateTime.to_date(&1.unlock_date), Date)}
+    end)
   end
 
   def filter_assignments(:completed, assignments, _now) do
-    # completed =
-    Enum.filter(assignments, fn a ->
-      a.status_name == "Complete"
+    assignments
+    |> Enum.filter(fn a -> a.status_name == "Complete" end)
+    |> Enum.group_by(fn a -> "complete-#{a.due_date}" end)
+    |> Enum.map(fn {priority, list} ->
+      {priority, Enum.sort_by(list, &DateTime.to_date(&1.due_date), Date)}
     end)
-
-    # group_by_priority(completed, now)
   end
-
-  # defp group_by_priority([%Assignment{}], now) do
-  # end
 end
