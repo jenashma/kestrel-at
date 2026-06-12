@@ -67,4 +67,44 @@ defmodule Kestrel.Assignments do
     })
     |> Repo.all()
   end
+
+  def filter_assignments(:upcoming, assignments, now) do
+    # upcoming =
+    Enum.filter(assignments, fn a ->
+      DateTime.compare(a.unlock_date, now) == :gt and a.status_name != "Complete"
+    end)
+
+    # group_by_priority(upcoming, now)
+  end
+
+  def filter_assignments(:available, assignments, now) do
+    # available =
+    Enum.filter(assignments, fn a ->
+      DateTime.compare(a.unlock_date, now) != :gt and a.status_name != "Complete"
+    end)
+
+    # available_by_priority =
+    #   Enum.filter(available, fn a ->
+    #     a.is_priority == true
+    #   end)
+
+    # available_by_date =
+    #   Enum.filter(available, fn a ->
+    #     a.is_priority != true
+    #   end)
+
+    # {group_by_priority(available_by_priority, now), group_by_priority(available_by_date, now)}
+  end
+
+  def filter_assignments(:completed, assignments, _now) do
+    # completed =
+    Enum.filter(assignments, fn a ->
+      a.status_name == "Complete"
+    end)
+
+    # group_by_priority(completed, now)
+  end
+
+  # defp group_by_priority([%Assignment{}], now) do
+  # end
 end

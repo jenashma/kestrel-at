@@ -160,7 +160,6 @@ Repo.insert!(%Assignment{
   status_id: archived.id,
   name: "Assignment 1",
   topic: "Static and Dynamic Arrays",
-  priority: 9.9,
   unlock_date: shift_date(-5, :unlock),
   due_date: shift_date(5, :due),
   submission_method: "Canvas"
@@ -175,7 +174,6 @@ Repo.insert!(%Assignment{
   status_id: archived.id,
   name: "Assignment 1",
   topic: "HTML and CSS",
-  priority: 9.9,
   unlock_date: shift_date(5, :unlock),
   due_date: shift_date(10, :due),
   submission_method: "Canvas"
@@ -194,7 +192,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Assignment 1",
   topic: "Asymptotic Notations and Running Time",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-11, :due),
   submission_method: "Canvas"
@@ -209,7 +206,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Module 1 Quiz",
   topic: "Asymptotic Notations and Running Time",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-11, :due),
   submission_method: "Canvas"
@@ -224,7 +220,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Assignment 2",
   topic: "Recursion and Recurrence Relations",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-4, :due),
   submission_method: "Canvas"
@@ -239,7 +234,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Module 2 Quiz",
   topic: "Recursion and Recurrence Relations",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-4, :due),
   submission_method: "Canvas"
@@ -254,7 +248,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Assignment 3",
   topic: "Correctness of Algorithms and Divide & Conquer Technique",
-  priority: 9.9,
   unlock_date: shift_date(-17, :unlock),
   due_date: shift_date(3, :due),
   submission_method: "Canvas"
@@ -269,7 +262,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Module 3 Quiz",
   topic: "Correctness of Algorithms and Divide & Conquer Technique",
-  priority: 9.9,
   unlock_date: shift_date(-17, :unlock),
   due_date: shift_date(3, :due),
   submission_method: "Canvas"
@@ -284,7 +276,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Assignment 4",
   topic: "Dynamic Programming",
-  priority: 9.9,
   unlock_date: shift_date(-10, :unlock),
   due_date: shift_date(10, :due),
   submission_method: "Canvas"
@@ -299,7 +290,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Module 4 Quiz",
   topic: "Dynamic Programming",
-  priority: 9.9,
   unlock_date: shift_date(-10, :unlock),
   due_date: shift_date(10, :due),
   submission_method: "Canvas"
@@ -315,7 +305,6 @@ cs325_mod4_discussion =
     status_id: in_progress.id,
     name: "Module 4 Discussion",
     topic: "Dynamic Programming",
-    priority: 9.9,
     unlock_date: shift_date(-10, :unlock),
     due_date: shift_date(13, :due),
     submission_method: "Canvas"
@@ -347,7 +336,8 @@ Repo.insert!(%Assignment{
   status_id: in_progress.id,
   name: "Assignment 5",
   topic: "Graph Algorithms Part 1",
-  priority: 9.9,
+  is_prioritized: true,
+  priority: 4.0,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(17, :due),
   submission_method: "Canvas",
@@ -363,7 +353,8 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Module 5 Quiz",
   topic: "Graph Algorithms Part 1",
-  priority: 9.9,
+  is_prioritized: true,
+  priority: 4.5,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(17, :due),
   submission_method: "Canvas"
@@ -378,7 +369,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Assignment 6",
   topic: "Greedy Technique and Graph Algorithms Part 2",
-  priority: 9.9,
   unlock_date: shift_date(4, :unlock),
   due_date: shift_date(24, :due),
   submission_method: "Canvas",
@@ -395,7 +385,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Module 6 Quiz",
   topic: "Greedy Technique and Graph Algorithms Part 2",
-  priority: 9.9,
   unlock_date: shift_date(4, :unlock),
   due_date: shift_date(24, :due),
   submission_method: "Canvas"
@@ -410,7 +399,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Assignment 7",
   topic: "Backtracking",
-  priority: 9.9,
   unlock_date: shift_date(11, :unlock),
   due_date: shift_date(31, :due),
   submission_method: "Canvas"
@@ -425,7 +413,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Assignment 8",
   topic: "Complexity Classes and NP Completeness Proof",
-  priority: 9.9,
   unlock_date: shift_date(18, :unlock),
   due_date: shift_date(38, :due),
   submission_method: "Canvas"
@@ -440,7 +427,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Module 8 Quiz",
   topic: "Complexity Classes and NP Completeness Proof",
-  priority: 9.9,
   unlock_date: shift_date(18, :unlock),
   due_date: shift_date(38, :due),
   submission_method: "Canvas"
@@ -455,7 +441,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Assignment 9",
   topic: "Heuristic Algorithms",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(45, :due),
   submission_method: "Canvas"
@@ -470,7 +455,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Module 9 Quiz",
   topic: "Heuristic Algorithms",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(45, :due),
   submission_method: "Canvas"
@@ -485,7 +469,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Mock Interview",
   topic: "Mock Interview",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(43, :due),
   submission_method: "Canvas"
@@ -500,7 +483,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Final Exam",
   topic: "Cumulative",
-  priority: 9.9,
   unlock_date: shift_date(32, :unlock),
   due_date: shift_date(50, :due),
   submission_method: "Canvas"
@@ -520,7 +502,6 @@ ba260_d1_wk1 =
     status_id: complete.id,
     name: "Wk 1 Discussion 1",
     topic: "Show and Tell & Self-Introductions",
-    priority: 9.9,
     unlock_date: shift_date(-24, :unlock),
     due_date: shift_date(-13, :due),
     submission_method: "Canvas"
@@ -554,7 +535,6 @@ ba260_d2_wk1 =
     status_id: complete.id,
     name: "Wk 1 Discussion 2",
     topic: "EM - Drawing and Discussion",
-    priority: 9.9,
     unlock_date: shift_date(-24, :unlock),
     due_date: shift_date(-13, :due),
     submission_method: "Canvas"
@@ -587,7 +567,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Wk 1 Assignment 1",
   topic: "Big 5 Personality Test",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-11, :due),
   submission_method: "Canvas"
@@ -602,7 +581,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Wk 1 Assignment 2",
   topic: "Individual Entrepreneurial Characteristics Survey",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-11, :due),
   submission_method: "Canvas"
@@ -617,7 +595,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Research Participation",
   topic: "Unknown",
-  priority: 3.0,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-13, :due),
   submission_method: "Canvas"
@@ -633,7 +610,6 @@ ba260_d1_wk2 =
     status_id: complete.id,
     name: "Wk 2 Discussion 1",
     topic: "AI - A New Team Member?",
-    priority: 9.9,
     unlock_date: shift_date(-24, :unlock),
     due_date: shift_date(-6, :due),
     submission_method: "Canvas"
@@ -667,7 +643,6 @@ ba260_d2_wk2 =
     status_id: complete.id,
     name: "Wk 2 Discussion 2",
     topic: "The Do's and Don'ts of Effective Teamwork",
-    priority: 9.9,
     unlock_date: shift_date(-24, :unlock),
     due_date: shift_date(-6, :due),
     submission_method: "Canvas"
@@ -700,7 +675,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Wk 2 Assignment 1",
   topic: "Team MOU",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-6, :due),
   submission_method: "Canvas"
@@ -716,7 +690,6 @@ ba260_d1_wk3 =
     status_id: complete.id,
     name: "Wk 3 Discussion 1",
     topic: "Connecting Reading and Your Job to Be Done",
-    priority: 9.9,
     unlock_date: shift_date(-17, :unlock),
     due_date: shift_date(1, :due),
     submission_method: "Canvas"
@@ -749,7 +722,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Wk 3 Quiz 1",
   topic: "Brainstorming Business Idea as Customer Problem",
-  priority: 9.9,
   unlock_date: shift_date(-17, :unlock),
   due_date: shift_date(-1, :due),
   submission_method: "Canvas"
@@ -765,7 +737,6 @@ ba260_d2_wk3 =
     status_id: complete.id,
     name: "Wk 3 Discussion 2",
     topic: "Record Invest Select Customer Problem",
-    priority: 9.9,
     unlock_date: shift_date(-17, :unlock),
     due_date: shift_date(1, :due),
     submission_method: "Canvas"
@@ -798,7 +769,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Wk 3 Assignment 1",
   topic: "Self Reflection",
-  priority: 9.9,
   unlock_date: shift_date(-17, :unlock),
   due_date: shift_date(3, :due),
   submission_method: "Canvas"
@@ -814,7 +784,8 @@ ba260_d1_wk4 =
     status_id: not_started.id,
     name: "Wk 4 Discussion 1",
     topic: "Connecting OEF and Real Life",
-    priority: 9.9,
+    is_prioritized: true,
+    priority: 2.0,
     unlock_date: shift_date(-10, :unlock),
     due_date: shift_date(8, :due),
     submission_method: "Canvas"
@@ -845,7 +816,8 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 4 Quiz 1",
   topic: "Brainstorming Business Ideas Solution Space",
-  priority: 9.9,
+  is_prioritized: true,
+  priority: 3.0,
   unlock_date: shift_date(-10, :unlock),
   due_date: shift_date(6, :due),
   submission_method: "Canvas"
@@ -861,7 +833,8 @@ ba260_d2_wk4 =
     status_id: in_progress.id,
     name: "Wk 4 Discussion 2",
     topic: "Record Invest Select Customer Solution",
-    priority: 9.9,
+    is_prioritized: true,
+    priority: 2.5,
     unlock_date: shift_date(-10, :unlock),
     due_date: shift_date(8, :due),
     submission_method: "Canvas",
@@ -894,7 +867,8 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 4 Assignment 1",
   topic: "Self Reflection",
-  priority: 9.9,
+  is_prioritized: true,
+  priority: 3.5,
   unlock_date: shift_date(-10, :unlock),
   due_date: shift_date(10, :due),
   submission_method: "Canvas"
@@ -909,7 +883,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 4 Assignment 2",
   topic: "Team Reflection - I Like I Wish What If",
-  priority: 9.9,
   unlock_date: shift_date(-10, :unlock),
   due_date: shift_date(10, :due),
   submission_method: "Canvas"
@@ -925,7 +898,6 @@ ba260_wk45_a3 =
     status_id: not_started.id,
     name: "Wk 4-5 Assignment 3",
     topic: "Team Solution",
-    priority: 9.9,
     unlock_date: shift_date(-10, :unlock),
     due_date: shift_date(13, :due),
     submission_method: "Canvas"
@@ -956,7 +928,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 5 Assignment 1",
   topic: "VentureBlocks Simulation",
-  priority: 9.9,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(11, :due),
   submission_method: "Canvas"
@@ -971,7 +942,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 5 Assignment 2",
   topic: "Customer Discovery Interview Template",
-  priority: 9.9,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(11, :due),
   submission_method: "Canvas"
@@ -986,7 +956,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 5 Assignment 3",
   topic: "Customer Discovery Interview and Individual Summary",
-  priority: 9.9,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(13, :due),
   submission_method: "Canvas"
@@ -1002,7 +971,6 @@ ba260_d1_wk5 =
     status_id: not_started.id,
     name: "Wk 5 Discussion 1",
     topic: "Discussion",
-    priority: 9.9,
     unlock_date: shift_date(-3, :unlock),
     due_date: shift_date(15, :due),
     submission_method: "Canvas"
@@ -1033,7 +1001,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 5 Assignment 4",
   topic: "Self Reflection",
-  priority: 9.9,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(17, :due),
   submission_method: "Canvas"
@@ -1048,7 +1015,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 5 Assignment 5",
   topic: "Peer Review #1",
-  priority: 9.9,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(17, :due),
   submission_method: "Canvas"
@@ -1064,7 +1030,6 @@ ba260_d1_wk6 =
     status_id: not_started.id,
     name: "Wk 6 Discussion 1",
     topic: "Prototype with Design Thinking",
-    priority: 9.9,
     unlock_date: shift_date(4, :unlock),
     due_date: shift_date(22, :due),
     submission_method: "Canvas"
@@ -1088,7 +1053,6 @@ ba260_d2_wk6 =
     status_id: not_started.id,
     name: "Wk 6 Discussion 2",
     topic: "Share Prototype and Feedback",
-    priority: 9.9,
     unlock_date: shift_date(4, :unlock),
     due_date: shift_date(22, :due),
     submission_method: "Canvas"
@@ -1119,7 +1083,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 6 Discussion 3",
   topic: "Team Prototype Feedback Summary and Iteration",
-  priority: 9.9,
   unlock_date: shift_date(4, :unlock),
   due_date: shift_date(24, :due),
   submission_method: "Canvas"
@@ -1134,7 +1097,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 6 Assignment 1",
   topic: "Self Reflection",
-  priority: 9.9,
   unlock_date: shift_date(4, :unlock),
   due_date: shift_date(24, :due),
   submission_method: "Canvas"
@@ -1149,7 +1111,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 6 Assignment 2",
   topic: "Team Reflection - I Like I Wish What If",
-  priority: 9.9,
   unlock_date: shift_date(4, :unlock),
   due_date: shift_date(24, :due),
   submission_method: "Canvas"
@@ -1164,7 +1125,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 7 Quiz 1",
   topic: "Business Model Canvas Updated",
-  priority: 9.9,
   unlock_date: shift_date(11, :unlock),
   due_date: shift_date(27, :due),
   submission_method: "Canvas"
@@ -1180,7 +1140,6 @@ ba260_d1_wk7 =
     status_id: not_started.id,
     name: "Wk 7 Discussion 1",
     topic: "Record Invest Select a Business Model",
-    priority: 9.9,
     unlock_date: shift_date(11, :unlock),
     due_date: shift_date(29, :due),
     submission_method: "Canvas"
@@ -1212,7 +1171,6 @@ ba260_d2_wk7 =
     status_id: not_started.id,
     name: "Wk 7 Discussion 2",
     topic: "Business Model Canvas Peer Review",
-    priority: 9.9,
     unlock_date: shift_date(11, :unlock),
     due_date: shift_date(31, :due),
     submission_method: "Canvas"
@@ -1243,7 +1201,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 7 Discussion 3",
   topic: "Team Business Model Summary and Iteration",
-  priority: 9.9,
   unlock_date: shift_date(11, :unlock),
   due_date: shift_date(31, :due),
   submission_method: "Canvas"
@@ -1258,7 +1215,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 7 Assignment 1",
   topic: "Self Reflection",
-  priority: 9.9,
   unlock_date: shift_date(11, :unlock),
   due_date: shift_date(31, :due),
   submission_method: "Canvas"
@@ -1273,7 +1229,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 7 Assignment 2",
   topic: "Team Member Exchange Survey",
-  priority: 9.9,
   unlock_date: shift_date(11, :unlock),
   due_date: shift_date(21, :due),
   submission_method: "Canvas"
@@ -1289,7 +1244,6 @@ ba260_wk8_a1 =
     status_id: not_started.id,
     name: "Wk 8 Assignment 1",
     topic: "Survey of Willingness to Pay in Qualtrics",
-    priority: 9.9,
     unlock_date: shift_date(18, :unlock),
     due_date: shift_date(38, :due),
     submission_method: "Canvas"
@@ -1320,7 +1274,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 8 Assignment 2",
   topic: "Solution Pricing Strategy",
-  priority: 9.9,
   unlock_date: shift_date(18, :unlock),
   due_date: shift_date(38, :due),
   submission_method: "Canvas"
@@ -1335,7 +1288,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 8 Assignment 3",
   topic: "Self Reflection",
-  priority: 9.9,
   unlock_date: shift_date(18, :unlock),
   due_date: shift_date(38, :due),
   submission_method: "Canvas"
@@ -1351,7 +1303,6 @@ ba260_d1_wk9 =
     status_id: not_started.id,
     name: "Wk 9 Discussion 1",
     topic: "HACE OhmConnect",
-    priority: 9.9,
     unlock_date: shift_date(25, :unlock),
     due_date: shift_date(43, :due),
     submission_method: "Canvas"
@@ -1382,7 +1333,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 9 Assignment 1",
   topic: "TAM-SAM-SOM",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(45, :due),
   submission_method: "Canvas"
@@ -1397,7 +1347,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 9 Assignment 2",
   topic: "Team Reflection - I Like I Wish What If",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(45, :due),
   submission_method: "Canvas"
@@ -1412,7 +1361,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 9 Assignment 3",
   topic: "Self Reflection",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(45, :due),
   submission_method: "Canvas"
@@ -1428,7 +1376,6 @@ ba260_d1_wk10 =
     status_id: not_started.id,
     name: "Wk 10 Discussion 1",
     topic: "Elevator Pitch Analysis and Discussion Board",
-    priority: 9.9,
     unlock_date: shift_date(32, :unlock),
     due_date: shift_date(48, :due),
     submission_method: "Canvas"
@@ -1460,7 +1407,6 @@ ba260_d2_wk10 =
     status_id: not_started.id,
     name: "Wk 10 Discussion 2",
     topic: "Business Pitch",
-    priority: 9.9,
     unlock_date: shift_date(32, :unlock),
     due_date: shift_date(50, :due),
     submission_method: "Canvas"
@@ -1491,7 +1437,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 10 Assignment 1",
   topic: "Business Pitch Peer Feedback",
-  priority: 9.9,
   unlock_date: shift_date(32, :unlock),
   due_date: shift_date(50, :due),
   submission_method: "Canvas"
@@ -1506,7 +1451,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 10 Assignment 2",
   topic: "Peer Review #2",
-  priority: 9.9,
   unlock_date: shift_date(32, :unlock),
   due_date: shift_date(50, :due),
   submission_method: "Canvas"
@@ -1521,7 +1465,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Wk 11 Final Exam",
   topic: "Final Exam",
-  priority: 9.9,
   unlock_date: shift_date(39, :unlock),
   due_date: shift_date(52, :due),
   submission_method: "Canvas"
@@ -1536,7 +1479,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Extra Credit Final Survey",
   topic: "Extra Credit Survey",
-  priority: 3.0,
   unlock_date: shift_date(39, :unlock),
   due_date: shift_date(52, :due),
   submission_method: "Canvas"
@@ -1555,7 +1497,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Chapter 1 & 2 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(-24, :unlock),
   due_date: shift_date(-17, :due),
   submission_method: "McGraw Hill Connect"
@@ -1570,7 +1511,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Chapter 3 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(-17, :unlock),
   due_date: shift_date(-10, :due),
   submission_method: "McGraw Hill Connect"
@@ -1585,7 +1525,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Chapter 4 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(-10, :unlock),
   due_date: shift_date(-3, :due),
   submission_method: "McGraw Hill Connect"
@@ -1600,7 +1539,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Chapter 5 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(-3, :unlock),
   due_date: shift_date(4, :due),
   submission_method: "McGraw Hill Connect"
@@ -1615,7 +1553,6 @@ Repo.insert!(%Assignment{
   status_id: in_progress.id,
   name: "Chapter 6 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(4, :unlock),
   due_date: shift_date(11, :due),
   submission_method: "McGraw Hill Connect",
@@ -1632,7 +1569,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 18 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(11, :unlock),
   due_date: shift_date(18, :due),
   submission_method: "McGraw Hill Connect",
@@ -1648,7 +1584,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 12 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(18, :unlock),
   due_date: shift_date(25, :due),
   submission_method: "McGraw Hill Connect"
@@ -1663,7 +1598,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 13 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(25, :unlock),
   due_date: shift_date(32, :due),
   submission_method: "McGraw Hill Connect"
@@ -1678,7 +1612,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 14 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(32, :unlock),
   due_date: shift_date(39, :due),
   submission_method: "McGraw Hill Connect",
@@ -1694,7 +1627,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 16 SmartBook",
   topic: "SmartBook",
-  priority: 9.9,
   unlock_date: shift_date(39, :unlock),
   due_date: shift_date(46, :due),
   submission_method: "McGraw Hill Connect"
@@ -1713,7 +1645,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Chapter 1 & 2 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(-21, :unlock),
   due_date: shift_date(-14, :due),
   submission_method: "McGraw Hill Connect"
@@ -1728,7 +1659,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Chapter 3 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(-14, :unlock),
   due_date: shift_date(-7, :due),
   submission_method: "McGraw Hill Connect"
@@ -1740,10 +1670,11 @@ Repo.insert!(%Assignment{
   term_id: spring_26.id,
   course_id: econ.id,
   type_id: homework.id,
-  status_id: complete.id,
+  status_id: in_progress.id,
   name: "Chapter 4 Homework",
   topic: "Homework",
-  priority: 9.9,
+  is_prioritized: true,
+  priority: 1.0,
   unlock_date: shift_date(-7, :unlock),
   due_date: shift_date(0, :due),
   submission_method: "McGraw Hill Connect"
@@ -1755,10 +1686,9 @@ Repo.insert!(%Assignment{
   term_id: spring_26.id,
   course_id: econ.id,
   type_id: homework.id,
-  status_id: complete.id,
+  status_id: not_started.id,
   name: "Chapter 5 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(0, :unlock),
   due_date: shift_date(7, :due),
   submission_method: "McGraw Hill Connect",
@@ -1774,7 +1704,6 @@ Repo.insert!(%Assignment{
   status_id: in_progress.id,
   name: "Chapter 6 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(7, :unlock),
   due_date: shift_date(14, :due),
   submission_method: "McGraw Hill Connect"
@@ -1789,7 +1718,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 18 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(14, :unlock),
   due_date: shift_date(21, :due),
   submission_method: "McGraw Hill Connect"
@@ -1804,7 +1732,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 12 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(21, :unlock),
   due_date: shift_date(28, :due),
   submission_method: "McGraw Hill Connect"
@@ -1819,7 +1746,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 13 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(28, :unlock),
   due_date: shift_date(35, :due),
   submission_method: "McGraw Hill Connect"
@@ -1834,7 +1760,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 14 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(35, :unlock),
   due_date: shift_date(42, :due),
   submission_method: "McGraw Hill Connect"
@@ -1849,7 +1774,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Chapter 16 Homework",
   topic: "Homework",
-  priority: 9.9,
   unlock_date: shift_date(42, :unlock),
   due_date: shift_date(49, :due),
   submission_method: "McGraw Hill Connect"
@@ -1868,7 +1792,6 @@ Repo.insert!(%Assignment{
   status_id: complete.id,
   name: "Exam 1",
   topic: "Chapters 1, 2, 3, 4",
-  priority: 9.9,
   unlock_date: shift_date(-6, :unlock),
   due_date: shift_date(-2, :due),
   submission_method: "McGraw Hill Connect"
@@ -1883,7 +1806,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Exam 2",
   topic: "Chapters 5, 6, 18",
-  priority: 9.9,
   unlock_date: shift_date(12, :unlock),
   due_date: shift_date(16, :due),
   submission_method: "McGraw Hill Connect"
@@ -1898,7 +1820,6 @@ Repo.insert!(%Assignment{
   status_id: not_started.id,
   name: "Exam 3",
   topic: "Chapters 12, 13, 14, 16",
-  priority: 9.9,
   unlock_date: shift_date(40, :unlock),
   due_date: shift_date(44, :due),
   submission_method: "McGraw Hill Connect"

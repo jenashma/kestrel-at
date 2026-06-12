@@ -11,7 +11,9 @@ defmodule Kestrel.Repo.Migrations.CreateAssignments do
       add :type_id, references(:types, type: :binary_id, on_delete: :restrict), null: false
       add :name, :string, null: false
       add :topic, :string
-      add :priority, :float, default: 9.9, null: false
+      add :is_prioritized, :boolean, default: false, null: false
+      add :priority, :float
+      add :group, :integer
       add :due_date, :utc_datetime, null: false
       add :unlock_date, :utc_datetime, null: false
       add :submission_method, :string

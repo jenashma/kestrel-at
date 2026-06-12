@@ -8,7 +8,9 @@ defmodule Kestrel.Assignments.Assignment do
   schema "assignments" do
     field :name, :string
     field :topic, :string
+    field :is_prioritized, :boolean
     field :priority, :float
+    field :group, :integer
     field :due_date, :utc_datetime
     field :unlock_date, :utc_datetime
     field :submission_method, :string
@@ -29,7 +31,9 @@ defmodule Kestrel.Assignments.Assignment do
     |> cast(attrs, [
       :name,
       :topic,
+      :is_prioritized,
       :priority,
+      :group,
       :due_date,
       :unlock_date,
       :submission_method,
@@ -43,7 +47,7 @@ defmodule Kestrel.Assignments.Assignment do
     ])
     |> validate_required([
       :name,
-      :priority,
+      :is_prioritized,
       :due_date,
       :unlock_date,
       :user_id,
