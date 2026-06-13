@@ -84,9 +84,9 @@ defmodule Kestrel.Assignments do
 
     date_list =
       date_raw
-      |> Enum.group_by(fn a -> "available-by-due-date-#{a.due_date}" end)
+      |> Enum.group_by(fn a -> "available-by-due-date-#{DateTime.to_date(a.due_date)}" end)
       |> Enum.map(fn {priority, list} ->
-        {priority, Enum.sort_by(list, &DateTime.to_date(&1.due_date), Date)}
+        {priority, Enum.sort_by(list, &{&1.course_code, &1.name})}
       end)
 
     {priority_list, date_list}
@@ -97,18 +97,23 @@ defmodule Kestrel.Assignments do
     |> Enum.filter(fn a ->
       DateTime.compare(a.unlock_date, now) == :gt and a.status_name != "Complete"
     end)
-    |> Enum.group_by(fn a -> "upcoming-#{a.unlock_date}" end)
+    |> Enum.group_by(fn a -> "upcoming-#{DateTime.to_date(a.unlock_date)}" end)
     |> Enum.map(fn {priority, list} ->
-      {priority, Enum.sort_by(list, &DateTime.to_date(&1.unlock_date), Date)}
+      {priority,
+       Enum.sort_by(
+         Enum.sort_by(list, &{&1.course_code, &1.name}),
+         & &1.due_date,
+         DateTime
+       )}
     end)
   end
 
   def filter_assignments(:completed, assignments, _now) do
     assignments
     |> Enum.filter(fn a -> a.status_name == "Complete" end)
-    |> Enum.group_by(fn a -> "complete-#{a.due_date}" end)
+    |> Enum.group_by(fn a -> "complete-#{DateTime.to_date(a.due_date)}" end)
     |> Enum.map(fn {priority, list} ->
-      {priority, Enum.sort_by(list, &DateTime.to_date(&1.due_date), Date)}
+      {priority, Enum.sort_by(list, &{&1.course_code, &1.name})}
     end)
   end
 end

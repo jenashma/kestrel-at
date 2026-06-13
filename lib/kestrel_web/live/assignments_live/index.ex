@@ -40,7 +40,7 @@ defmodule KestrelWeb.AssignmentsLive.Index do
     <div id="assignment_list">
       <h2>Available Now</h2>
       
-      <div id="priority_container_list">
+      <div id="priority_available_list">
         <%= for {id, assignment_list} <- @available_by_priority do %>
           <.live_component
             id={id}
@@ -52,7 +52,7 @@ defmodule KestrelWeb.AssignmentsLive.Index do
         <% end %>
       </div>
       
-      <div id="priority_container_list">
+      <div id="due_date_available_list">
         <%= for {id, assignment_list} <- @available_by_due_date do %>
           <.live_component
             id={id}
