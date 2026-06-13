@@ -41,10 +41,21 @@ h2 {
     align-items: flex-start;
 }
 
+.priority_container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: var(--bg-border);
+}
+
 .min_card {
     display: flex;
     width: 300px;
-    margin: 3px auto;
+    margin: 3px 7px;
     padding: 3px;
     border: 2px solid;
     border-radius: 10px;
